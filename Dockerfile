@@ -5,6 +5,7 @@ FROM python:3.12-slim
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
 
+RUN chmod -R 755 /n01/filestore
 # Copy local code to the container image.
 ENV APP_HOME /app
 WORKDIR $APP_HOME
